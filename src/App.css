@@ -1,43 +1,68 @@
- #drum-machine {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   margin: 20px;
- }
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a2e; /* Dark background */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
- #display {
-   padding: 20px;
-   font-size: 32px;
-   padding-left: 50px;
-   padding-right: 60px;
- }
+#drum-machine {
+  background: #0f3460; /* Darker blue */
+  border: 2px solid #45e96b; /* Neon green border */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px #45e96b; /* Neon glow effect */
+}
 
- .drum-pad-container {
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   /* 3 columns */
-   gap: 10px;
-   /* Spacing between buttons */
-   width: 300px;
-   /* Adjust width as needed */
- }
+#display {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #16213e; /* Dark blue background */
+  border: 1px solid #45e96b; /* Neon green border */
+  border-radius: 5px;
+  box-shadow: 0 0 10px #45e96b;
+}
 
+.drum-pad-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
 
- .drum-pad {
-   width: 80px;
-   height: 80px;
-   font-size: 16px;
-   background-color: #444;
-   color: white;
-   border: none;
-   border-radius: 8px;
-   cursor: pointer;
-   box-shadow: 0 4px #222;
-   transition: all 0.2s ease;
- }
+.drum-pad {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f3460; /* Darker blue */
+  border: 2px solid #45e96b; /* Neon green border */
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px #45e96b; /* Neon glow effect */
+  transition: transform 0.2s, box-shadow 0.2s;
+}
 
- .drum-pad:active {
-   background-color: #666;
-   box-shadow: 0 2px #222;
-   transform: translateY(2px);
- }
+.drum-pad:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px #45e96b;
+}
+
+.drum-pad:active {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px #fca311; /* Neon orange for active state */
+}
+
+.clip {
+  display: none;
+}
